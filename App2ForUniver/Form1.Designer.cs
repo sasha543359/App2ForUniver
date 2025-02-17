@@ -42,6 +42,8 @@
             button7 = new Button();
             button8 = new Button();
             richTextBox1 = new RichTextBox();
+            label1 = new Label();
+            textBox4 = new TextBox();
             SuspendLayout();
             // 
             // button1
@@ -176,11 +178,30 @@
             richTextBox1.Text = "";
             richTextBox1.TextChanged += richTextBox1_TextChanged;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(28, 481);
+            label1.Name = "label1";
+            label1.Size = new Size(135, 15);
+            label1.TabIndex = 14;
+            label1.Text = "nr de inregistrari in tabel";
+            // 
+            // textBox4
+            // 
+            textBox4.Location = new Point(180, 481);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(67, 23);
+            textBox4.TabIndex = 15;
+            textBox4.TextChanged += textBox4_TextChanged;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1298, 888);
+            Controls.Add(textBox4);
+            Controls.Add(label1);
             Controls.Add(richTextBox1);
             Controls.Add(button8);
             Controls.Add(button7);
@@ -197,6 +218,7 @@
             Controls.Add(button1);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -217,5 +239,7 @@
         private Button button7;
         private Button button8;
         private RichTextBox richTextBox1;
+        private Label label1;
+        private TextBox textBox4;
     }
 }

@@ -5,6 +5,7 @@ namespace App2ForUniver
         public Form1()
         {
             InitializeComponent();
+            textBox4.Text = 0.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -27,6 +28,8 @@ namespace App2ForUniver
 
                     listBox2.Items.Clear();
                     listBox2.Items.AddRange(lines);
+
+                    textBox4.Text = (listBox1.Items.Count - 1).ToString();
                 }
                 catch (Exception ex)
                 {
@@ -135,6 +138,16 @@ namespace App2ForUniver
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }
